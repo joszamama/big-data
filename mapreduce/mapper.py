@@ -15,4 +15,4 @@ for row in reader:
     deaths = int(row[6])
     recovered = int(row[7])
     value = [confirmed, deaths, recovered]
-    print('%s,%s,%s' % (country_region, date, value))
+    print('%s;%s;%s' % (country_region, date, value))
