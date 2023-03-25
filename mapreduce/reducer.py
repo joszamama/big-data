@@ -10,9 +10,9 @@ for line in sys.stdin:
     line = line.strip()
     country, counts_str = line.split(";")
     counts = [int(x) for x in counts_str[1:-1].split(",")]
-
+    
     if current_country == country:
-        current_totals = map(add, current_totals, counts)
+        current_totals = list(map(add, current_totals, counts))
     else:
         if current_country:
             print(current_country + ": " + str(current_totals))
