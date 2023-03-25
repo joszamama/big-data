@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3.6
 
 from operator import add
 import sys
@@ -8,7 +8,7 @@ current_totals = [0, 0, 0]
 
 for line in sys.stdin:
     line = line.strip()
-    country, date, counts_str = line.split(";")
+    country, counts_str = line.split(";")
     counts = [int(x) for x in counts_str[1:-1].split(",")]
 
     if current_country == country:
